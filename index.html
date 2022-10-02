@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.js"
+        integrity="sha512-47N5yVdAeXJ+9qstVMTH2Z0EpX618sjYZcswRwhpldSTD0IbW6yQPtzg4RLrPp/2+TIgEF1elT68/ZBu82nqJA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <h1>calculator</h1>
+
+    <h1>Square: </h1>
+    <form onsubmit="square(); return false">
+        <input id="input" type="number">
+        <button type="submit">calculator</button>
+    </form>
+    <div id="result"></div>
+
+    <h1>Round: </h1>
+    <form onsubmit="round(); return false">
+        <input id="input1" type="number"  min="0" value="0" step="any">
+        <button type="submit1">calculator</button>
+    </form>
+    <div id="resultround"></div>
+   
+   
+   
+    <h1>Ceiling: </h1>
+    <form onsubmit="ceil(); return false">
+        <input id="input2" type="number"  min="0" value="0" step="any">
+        <button type="submit2">calculator</button>
+    </form>
+    <div id="resultceil"></div>
+   
+    <h1>Floor: </h1>
+    <form onsubmit="floor(); return false">
+        <input id="input3" type="number"  min="0" value="0" step="any">
+        <button type="submit3">calculator</button>
+    </form>
+    <div id="resultfloor"></div>
+    
+
+
+    <script>
+
+        let square = () => {
+            let input = +document.querySelector("#input").value;
+
+            let result = math.sqrt(input);
+
+            document.querySelector("#result").innerHTML = result;
+        }
+
+        let round = () => {
+            let input1 = +document.querySelector("#input1").value;
+
+            let result = math.round(input1);
+
+            document.querySelector("#resultround").innerHTML = result;
+        }
+        let ceil = () => {
+            let input2 = +document.querySelector("#input2").value;
+
+            let result = math.ceil(input2);
+
+            document.querySelector("#resultceil").innerHTML = result;
+        }
+        let floor = () => {
+            let input3 = +document.querySelector("#input3").value;
+
+            let result = math.floor(input3);
+
+            document.querySelector("#resultfloor").innerHTML = result;
+        }
+       
+
+
+
+    </script>
+</body>
+
+</html>
